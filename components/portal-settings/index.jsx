@@ -7,20 +7,15 @@ import PropTypes from 'prop-types';
 import { PORTAL_SETTINGS } from '../../utilities/constants';
 
 /**
- * The Icon Settings component allows for the path to the icons to be specified in all child components and is recommended to be used at the root of the application. It's render function is `return this.props.children`, so it can only have one child node.
+ * The Portal Settings component allows for the portal parent node to be specified in all child components and is recommended to be used at the root of the application. It's render function is `return this.props.children`, so it can only have one child node.
  *
- * **Individual sprites**
- * If you are using webpack it is advised to use the sprite properties
- * {actionSprite, standardSprite...} to specify the individual sprite paths so that webpack can
- * easily re-write the paths.
+ * **renderTo Selector**
+ * Use this to specify the portal node using a string that is compatiable with document.querySelector
+ * ie.
  * ```
- * import actionSprite from '......';
- *
- * <IconSettings actionSprite={actionSprite} ......>
+ * <PortalSettings renderTo="#portal-destination">
  * ```
- * **Root icon path**
- * Otherwise use the iconPath to specify the root path to where the icon files will be located in you application
- * such as `/assets/icons`.
+ * *
  */
 const PortalSettings = ({
   renderTo,
