@@ -41,8 +41,8 @@ PortalSettings.displayName = PORTAL_SETTINGS;
 
 PortalSettings.propTypes = {
 	/**
-	 * Path to the root icon folder
-	 * example: `/assets/icons`
+	 * Selector for the destination container for portal elements
+	 * example: `#portal-destination`
 	 */
 	renderTo: PropTypes.string,
 };
